@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Imusic</string>
+    <string name="activity_about">О приложении</string>
+    <string name="activity_main">IMusic</string>
+    <string name="settings_about">О приложении</string>
+</resources>
