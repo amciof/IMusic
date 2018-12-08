@@ -6,15 +6,31 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
     private final static String TAG = "MainActivity";
 
+    private String[] bands = { "Imagine Dragons", "Red Hot Chili Peppers", "Nirvana", "Queen", "Coldplay"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        ListView countriesList = (ListView) findViewById(R.id.bandsList);
+
+
+        Arrays.sort(bands);
+        ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, bands);
+
+        countriesList.setAdapter(adapter);
+
 
         Log.d(TAG, "onCreate");
     }
