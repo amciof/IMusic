@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Imusic</string>
-    <string name="activity_about">About</string>
+    // Main Activity
     <string name="activity_main">IMusic</string>
+    // About Activity
+    <string name="activity_about">About</string>
+    <string name="activity_about_author">Makharenok Vyacheslav</string>
+    // Settings
     <string name="settings_about">About</string>
 </resources>

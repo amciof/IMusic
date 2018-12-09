@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Imusic</string>
-    <string name="activity_about">О приложении</string>
+    // Main Activity
     <string name="activity_main">IMusic</string>
+    // About Activity
+    <string name="activity_about">О приложении</string>
+    <string name="activity_about_author">Махарёнок Вячеслав Валерьевич</string>
+    // Settings
     <string name="settings_about">О приложении</string>
 </resources>
