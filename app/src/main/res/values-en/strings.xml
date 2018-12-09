@@ -5,7 +5,10 @@
     <string name="activity_main">IMusic</string>
     // About Activity
     <string name="activity_about">About</string>
-    <string name="activity_about_author">Makharenok Vyacheslav</string>
+    <string name="activity_about_title_author">Executed:</string>
+    <string name="activity_about_author">Makharyonok Vyacheslav Valeryevich\n3 course, 5 group</string>
+    <string name="activity_about_title_version">Version Info</string>
+    <string name="activity_about_version">0.0.1 | 2018</string>
     // Settings
     <string name="settings_about">About</string>
 </resources>
