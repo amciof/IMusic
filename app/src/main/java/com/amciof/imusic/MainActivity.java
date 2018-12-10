@@ -22,15 +22,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         ListView countriesList = (ListView) findViewById(R.id.bandsList);
-
-
         Arrays.sort(bands);
         ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, bands);
-
         countriesList.setAdapter(adapter);
-
 
         Log.d(TAG, "onCreate");
     }
@@ -92,9 +87,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        Intent intent;
         switch(id){
-            case R.id.action_about :
-                Intent intent = new Intent(this, AboutActivity.class);
+            case R.id.action_about:
+                intent = new Intent(this, AboutActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.action_settings:
+                intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
                 return true;
         }

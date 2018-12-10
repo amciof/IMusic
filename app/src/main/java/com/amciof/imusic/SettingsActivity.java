@@ -6,14 +6,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 
-public class AboutActivity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
 
-    private final static String TAG = "AboutActivity";
+    private final static String TAG = "SettingsActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_settings);
 
         ActionBar actionBar =getSupportActionBar();
         actionBar.setHomeButtonEnabled(true);
