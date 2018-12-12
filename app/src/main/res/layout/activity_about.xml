@@ -6,15 +6,13 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     tools:context=".AboutActivity" >
-
     <LinearLayout
         android:id="@+id/LinearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="16dp"
-        android:paddingRight="16dp">
-
+        android:paddingRight="16dp" >
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
@@ -23,14 +21,12 @@
             android:text="@string/activity_about_title_author"
             android:textColor="@color/colorPrimary"
             android:textSize="16sp" />
-
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/activity_about_author" />
-
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
@@ -39,24 +35,20 @@
             android:text="@string/activity_about_title_education"
             android:textColor="@color/colorPrimary"
             android:textSize="16sp" />
-
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/activity_about_education" />
-
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/LinearLayout2"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:orientation="vertical"
         android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent">
-
+        app:layout_constraintBottom_toBottomOf="parent" >
         <TextView
             android:id="@+id/textView5"
             android:gravity="center"
@@ -68,7 +60,6 @@
             android:textColor="@android:color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
-
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
@@ -77,7 +68,5 @@
             android:layout_marginRight="16dp"
             android:gravity="center"
             android:text="@string/activity_about_version" />
-
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

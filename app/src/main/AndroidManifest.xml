@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.amciof.imusic">
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,19 +15,23 @@
             android:name=".MainActivity"
             android:label="@string/activity_main">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".AboutActivity"
-            android:label="@string/activity_about">
+            android:label="@string/activity_about" >
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/activity_settings">
+            android:label="@string/activity_settings" >
+        </activity>
+        <activity
+            android:name=".BandActivity"
+            >
         </activity>
     </application>
-
 </manifest>

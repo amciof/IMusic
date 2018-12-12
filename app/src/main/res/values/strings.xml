@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    // App
     <string name="app_name">Imusic</string>
+    <string name="app_hello">Hello, user!</string>
     // Main Activity
     <string name="activity_main">IMusic</string>
     // About Activity
@@ -10,7 +12,16 @@
     <string name="activity_about_title_education">Education:</string>
     <string name="activity_about_education">Belarusian State University\nFaculty of Applied Mathematics and Computer Science\n3 course, 5 group</string>
     <string name="activity_about_title_version">Version Info</string>
-    <string name="activity_about_version">0.4.2 | 2018</string>
+    <string name="activity_about_version">0.7.0 | 2018</string>
+    // BandActivity
+    <string name="activity_band">Edit</string>
     // Settings
     <string name="activity_settings">Settings</string>
+    // Buttons
+    <string name="button_add">Add</string>
+    <string name="button_save">Save</string>
+    <string name="button_delete">Delete</string>
+    // EditTexts
+    <string name="edittext_name">Enter name</string>
+    <string name="edittext_info">Enter info</string>
 </resources>
