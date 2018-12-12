@@ -49,7 +49,7 @@ public class BandActivity extends AppCompatActivity {
                     dbHelper.KEY_ID + "=?", new String[]{String.valueOf(userId)});
             bandCursor.moveToFirst();
             nameBox.setText(bandCursor.getString(1));
-            infoBox.setText(String.valueOf(bandCursor.getInt(2)));
+            infoBox.setText((bandCursor.getString(2)));
             bandCursor.close();
         } else {
             delButton.setVisibility(View.GONE);
@@ -109,7 +109,7 @@ public class BandActivity extends AppCompatActivity {
     public void save(View view){
         ContentValues cv = new ContentValues();
         cv.put(dbHelper.KEY_NAME, nameBox.getText().toString());
-        cv.put(dbHelper.KEY_INFO, Integer.parseInt(infoBox.getText().toString()));
+        cv.put(dbHelper.KEY_INFO, infoBox.getText().toString());
 
         if (userId > 0) {
             db.update(dbHelper.TABLE_BANDS, cv, dbHelper.KEY_ID + "=" + String.valueOf(userId), null);
