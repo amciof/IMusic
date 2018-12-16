@@ -2,7 +2,6 @@
 <resources>
     // App
     <string name="app_name">Imusic</string>
-    <string name="app_hello">Hello, user!</string>
     // Main Activity
     <string name="activity_main">IMusic</string>
     // About Activity

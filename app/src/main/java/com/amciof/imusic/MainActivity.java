@@ -1,6 +1,7 @@
 package com.amciof.imusic;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +14,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import static com.amciof.imusic.DBHelper.KEY_INFO;
 import static com.amciof.imusic.DBHelper.KEY_NAME;
@@ -31,14 +31,20 @@ public class MainActivity extends AppCompatActivity {
     Cursor bandCursor;
     SimpleCursorAdapter bandAdapter;
 
+    SharedPreferences settings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        settings = getSharedPreferences("Settings", MODE_PRIVATE);
+        String themeName = settings.getString("THEME", "Default Theme");
+        if (themeName.equals("Green Theme")) {
+            setTheme(R.style.AppThemeGreen);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        String app_hello =  getResources().getString(R.string.app_hello);
-        Toast toast = Toast.makeText(this, app_hello, Toast.LENGTH_LONG);
-        toast.show();
 
         dbInfo = (TextView) findViewById(R.id.dbInfo);
         bandList = (ListView) findViewById(R.id.bandList);

@@ -1,5 +1,7 @@
 package com.amciof.imusic;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,8 +12,18 @@ public class AboutActivity extends AppCompatActivity {
 
     private final static String TAG = "AboutActivity";
 
+    SharedPreferences settings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        settings = getSharedPreferences("Settings", MODE_PRIVATE);
+        String themeName = settings.getString("THEME", "Default Theme");
+        if (themeName.equals("Green Theme")) {
+            setTheme(R.style.AppThemeGreen);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
@@ -75,6 +87,8 @@ public class AboutActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case android.R.id.home:
                 this.finish();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

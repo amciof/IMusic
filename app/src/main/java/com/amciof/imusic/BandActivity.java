@@ -2,6 +2,7 @@ package com.amciof.imusic;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -24,10 +25,20 @@ public class BandActivity extends AppCompatActivity {
     SQLiteDatabase db;
     Cursor bandCursor;
 
+    SharedPreferences settings;
+
     long userId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        settings = getSharedPreferences("Settings", MODE_PRIVATE);
+        String themeName = settings.getString("THEME", "Default Theme");
+        if (themeName.equals("Green Theme")) {
+            setTheme(R.style.AppThemeGreen);
+        } else {
+            setTheme(R.style.AppTheme);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_band);
 
